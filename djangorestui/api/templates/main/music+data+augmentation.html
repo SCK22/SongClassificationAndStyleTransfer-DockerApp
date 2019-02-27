@@ -1,3 +1,34 @@
+<head>
+  {% load static %}
+  <!-- Prism CSS -->
+  <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript for Materialize CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<nav>
+  
+
+  <div class="nav-wrapper cyan darken-3">
+    <a href="https://www.insofe.edu.in/" class="brand-logo left">  
+       {% load static %} <img src="{% static "insofe_logo.png" %}" alt="INSOFE"  style="width:110px;height:60px;"  ALIGN="left" HSPACE="5"/></a>
+    <a href="/" class="brand-logo center"><font color="white"><strong>ClaSo Framework</strong></font></a>
+
+    <ul id="nav-mobile" class="right">
+        <!-- <li><a href="/"> <font color="black">Upload songs</font></a></li> -->
+      <!-- <li><a href="/uploadedsongs/"> <font color="black">Uploaded songs</font></a></li> -->
+      <li><a href="/generatedmusic/"> <font color="white"><strong>Generated Music</strong></a></li>
+      <li><a href="/classificationcode/"> <font color="white"><strong>Classification</font></strong></a></li>
+      <li><a href="/styletransfercode/"> <font color="white"><strong>Style Transfer</font></strong></a></li>
+      <li><a href="/musicmix/"> <font color="white"><strong>Music Mix</font></strong></a></li>
+    </ul>
+    </ul>
+  </div>
+</nav>
+<body style="background-color:black">
+  </body>
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -12037,3 +12068,4 @@ Using TensorFlow backend.
 
 
 </html>
+<h5 class="black-text text-lighten-4 right" style="position: fixed; bottom : 20; right: 10 ;width:100%; text-align:right"><a class="black-text"><strong>© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</strong></a></h5>

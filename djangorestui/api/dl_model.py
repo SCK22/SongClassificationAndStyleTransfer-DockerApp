@@ -28,6 +28,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.externals import joblib 
 
 def get_parameters():
+    """Take the input parameters from the command line."""
     with open(sys.argv[1]) as f :
             config_file = json.load(f)
     return config_file
