@@ -1,0 +1,109 @@
+<head>
+    {% load static %}
+    <!-- Prism CSS -->
+    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <nav>
+    
+  
+    <div class="nav-wrapper cyan darken-3">
+      <a href="https://www.insofe.edu.in/" class="brand-logo left">   {% load static %} <img src="{% static "insofe_logo.png" %}" alt="INSOFE"  style="width:110px;height:60px;"  ALIGN="left" HSPACE="5"/></a>
+      <a href="/" class="brand-logo center"><font color="white"><strong>ClaSo Framework</strong></font></a>
+
+      <ul id="nav-mobile" class="right">
+          <!-- <li><a href="/"> <font color="black">Upload songs</font></a></li> -->
+        <!-- <li><a href="/uploadedsongs/"> <font color="black">Uploaded songs</font></a></li> -->
+        <li><a href="/generatedmusic/"> <font color="white"><strong>Generated Music</strong></a></li>
+        <li><a href="/classificationcode/"> <font color="white"><strong>Classification</font></strong></a></li>
+        <li><a href="/styletransfercode/"> <font color="white"><strong>Style Transfer</font></strong></a></li>
+        <li><a href="/musicmix/"> <font color="white"><strong>Music Mix</font></strong></a></li>
+      </ul>
+    </div>
+  </nav>
+  <body style="background-color:black">
+    </body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<a href="/augmentationcode/"> <font color="black"><strong>Augmentation</font></strong></a>
+
+<div class="row">
+  <div class="col m4">
+      <div class="card grey darken-3">
+          <div class="card-content black-text">
+            <form action="/" method="GET">
+              <span class="card-title"> <input type="submit" class="btn brown darken-1" value="Upload songs" name="upload_button"></span>
+            </form>
+              {% block content %}
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="myfile">
+                <button type="submit">Upload</button>
+              </form>
+            </ul>
+              {% if uploaded_file_url %}
+                <p>File uploaded: <a href="/uploadedsongs/">here</a></p>
+              {% endif %}
+            
+            {% endblock %}
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col m4">
+      <div class="card grey darken-3">
+            <div class="card-content white-text">
+              <form action="uploadedsongs" method="GET">
+                <span class="card-title "> <input type="submit" class="btn brown darken-1" value="Uploaded songs" name="media_button"></span>
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+ <!-- background image -->
+{% load staticfiles %}
+
+<style type="text/css">
+        body { 
+         background: url('{% static "MillionDreams.png" %}') no-repeat; 
+         -webkit-background-size: auto;
+         -moz-background-size: auto;
+         -o-background-size: auto;
+             background-position: right 40px;
+
+         background-size: 100% auto;
+        }
+</style>
+
+<!-- <p class="white-text text-lighten-4 right" style="position: fixed; bottom : 110; right : 10 ;width:100%; text-align:right"><a class="white-text text-lighten-4">© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</a></p> -->
+<!-- <footer class="page-footer  transparent"> 
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+              <p class="black-text left">Song classification framework </p>
+            </div>
+         </div> -->
+        <!-- <div class="footer-copyright"> -->
+            <!-- <div class="container">
+                <p class="white-text text-lighten-4 right" style="position: fixed; bottom : 110; right : 10 ;width:100%; text-align:right"><a class="white-text text-lighten-4">© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</a></p>
+            </div>
+        </div> -->
+      <!-- </div> -->
+<!-- </footer> -->
+
+
+<h5 class="black-text text-lighten-4 right" style="position: fixed; bottom : 20; right: 10 ;width:100%; text-align:right"><a class="black-text"><strong>© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</strong></a></h5>

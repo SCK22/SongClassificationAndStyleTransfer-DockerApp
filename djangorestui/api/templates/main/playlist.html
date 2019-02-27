@@ -1,0 +1,40 @@
+<!-- 
+
+<head>
+        {% load static %}
+        <!-- Prism CSS -->
+        <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript for Materialize CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      </head>
+      <nav>
+        
+      
+        <div class="nav-wrapper cyan lighten-1">
+          <a href="https://www.insofe.edu.in/" class="brand-logo left">   {% load static %} <img src="{% static "insofe_logo.png" %}" alt="INSOFE"  style="width:110px;height:60px;"  ALIGN="left" HSPACE="5"/></a>
+          <a href="/" class="brand-logo center"><font color="black">ClaSo Framework</font></a>
+          <ul id="nav-mobile" class="right">
+              <!-- <li><a href="/"> <font color="black">Upload songs</font></a></li> -->
+            <li><a href="/uploadedsongs/"> <font color="black">Uploaded songs</font></a></li>
+            <li><a href="/experiments/"> <font color="black">Experiments</font></a></li>
+          </ul>
+          </ul>
+        </div>
+      </nav>
+      <body style="background-color:black">
+        </body>
+      <br>
+      <br>
+{% block content %}
+
+<div class='row'>
+    {{songname}}
+    <br>
+    <audio controls>
+        <source src="/home/jarvis/work/GEM2/djangorestui/api/media/{{songname}}" type="audio/wav">
+    </audio>
+</div>
+
+{% endblock %} -->

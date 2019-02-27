@@ -1,0 +1,89 @@
+<head>
+  {% load static %}
+  <!-- Prism CSS -->
+  <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript for Materialize CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<nav>
+  
+
+  <div class="nav-wrapper cyan lighten-1">
+    <a href="https://www.insofe.edu.in/" class="brand-logo left">   {% load static %} <img src="{% static "insofe_logo.png" %}" alt="INSOFE"  style="width:110px;height:60px;"  ALIGN="left" HSPACE="5"/></a>
+    <a href="/" class="brand-logo center"><font color="black">ClaSo Framework</font></a>
+    <ul id="nav-mobile" class="right">
+        <!-- <li><a href="/"> <font color="black">Upload songs</font></a></li> -->
+      <!-- <li><a href="/uploadedsongs/"> <font color="black">Uploaded songs</font></a></li> -->
+      <li><a href="/generatedmusic/"> <font color="black">Generated Music</font></a></li>
+      <li><a href="/classificationcode/"> <font color="black">Code for Classification</font></a></li>
+      <li><a href="/styletransfercode/"> <font color="black">Code for Style Transfer</font></a></li>
+      <li><a href="/musicmix/"> <font color="black">Code for Music Mix</font></a></li>
+    </ul>
+    </ul>
+  </div>
+</nav>
+<body style="background-color:black">
+  </body>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content dark-text">
+                <span class="card-title">Experiment : 1</span>
+                <!-- <p>simulation_added_on : {{sim.simulation_added_on}}</p>
+              <p>Simuation Name : {{sim.simulation_name}}</p> -->
+              <!-- <p> Parameters : </p>
+              <ol> 
+                <li>order_id : {{sim.order_id}}</li>
+                <li>flag_hindalco : {{sim.flag_hindalco}}</li>
+                <li>flag_printer : {{sim.flag_printer}}</li>
+                <li>flag_jobworker : {{sim.flag_jobworker}}</li>
+                <li>flag_ship_full : {{sim.flag_ship_full}}</li>
+                <li>num_orders_to_printer : {{sim.num_orders_to_printer}}</li>
+                <li>num_orders_to_jw : {{sim.num_orders_to_jw}}</li>
+                <li>participant_quality_alpha : {{sim.participant_quality_alpha}}</li>
+                <li>participant_quality_beta : {{sim.participant_quality_beta}}</li>
+              </ol>
+                <form action="runningSimulation" method="GET">
+                        <input type="hidden" value={{sim.id}} name="textbox" size="1" readonly>
+                        <input type="submit" class="btn" value="Run Simulation" name="runbtn"> -->
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            
+            
+
+{% load staticfiles %}
+
+<style type="text/css">
+        body { 
+         background: url('{% static "BeautyAndTheBeast.png" %}') no-repeat top right; 
+         -webkit-background-size: auto;
+         -moz-background-size: auto;
+         -o-background-size: auto;
+         background-size: 100% auto;
+        }
+</style>
+
+<!-- <footer class="page-footer dark black "> -->
+     <!-- <div class="container">
+         <div class="row">
+             <div class="col l6 s12">
+               <p class="black-text left">Song classification framework </p>
+             </div>
+          </div> -->
+         <!-- <div class="footer-copyright"> -->
+             <!-- <div class="container"> -->
+                 <!-- <p class="white-text text-lighten-4 right" style="position: fixed; bottom : 110; right : 10 ;width:100%; text-align:right"><a class="white-text text-lighten-4">© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</a></p> -->
+             <!-- </div> -->
+         <!-- </div> -->
+       <!-- </div> -->
+ <!-- </footer> -->
+<h6 class="white-text text-lighten-4 right" style="position: fixed; bottom : 0; right: 10 ;width:100%; text-align:right"><a class="white-text text-lighten-4">© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</a></h6>

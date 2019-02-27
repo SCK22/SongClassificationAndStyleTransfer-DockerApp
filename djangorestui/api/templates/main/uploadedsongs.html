@@ -1,0 +1,95 @@
+<head>
+    {% load static %}
+    <!-- Prism CSS -->
+    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <nav>
+    
+  
+    <div class="nav-wrapper cyan darken-3">
+      <a href="https://www.insofe.edu.in/" class="brand-logo left">   {% load static %} <img src="{% static "insofe_logo.png" %}" alt="INSOFE"  style="width:110px;height:60px;"  ALIGN="left" HSPACE="5"/></a>
+      <a href="/" class="brand-logo center"><font color="white"><strong>ClaSo Framework</strong></font></a>
+
+      <ul id="nav-mobile" class="right">
+          <!-- <li><a href="/"> <font color="black">Upload songs</font></a></li> -->
+        <!-- <li><a href="/uploadedsongs/"> <font color="black">Uploaded songs</font></a></li> -->
+        <li><a href="/generatedmusic/"> <font color="white"><strong>Generated Music</strong></a></li>
+        <li><a href="/classificationcode/"> <font color="white"><strong>Classification</font></strong></a></li>
+        <li><a href="/styletransfercode/"> <font color="white"><strong>Style Transfer</font></strong></a></li>
+        <li><a href="/musicmix/"> <font color="white"><strong>Music Mix</font></strong></a></li>
+      </ul>
+      </ul>
+    </div>
+  </nav>
+  <body style="background-color:black">
+    </body>
+
+<div class="row">
+        {% for s in songs %}
+            <div class="col s4 l4">
+            <div class="card grey darken-3">
+                <div class="card-content white-text">
+                <p><strong>Song : {{s}}</strong></p>
+                    <!-- <input type="hidden" value={{s}} name="textbox" size="1" readonly> -->
+                    <!-- <input type="submit" class="btn" value="play song" name="playsong"> -->
+                    {% block content %}
+                    <div class='row'>
+                        <!-- {{s}} -->
+                        <audio controls style = "width : 250px;">
+                            <source src="/home/jarvis/work/GEM2/djangorestui/api/media/{{s}}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    {% endblock %}
+                   
+                    <!-- <form action="selectsong" method="GET">
+                        <input type="hidden" value={{s}} name="textbox_1" size="1000" readonly>
+                        <input type="submit" class="btn" value="Select Song" name="select_song">
+                    </form> -->
+                    <form action="runmodel" method="GET">
+                        <input type="hidden" value={{s}} name="song_box" size="1000" readonly>
+                        <input type="submit" class="btn" value="Predict" name="run_model"><strong>
+                    </form> 
+                </div>
+             </div>
+            </div>
+        {% endfor %}
+</div>
+    
+
+            
+
+<!-- <p> You will be redirected to success page once the simulation '{{sim.simulation_name}}' is complete.</p> -->
+{% load staticfiles %}
+
+<!-- <style type="text/css">
+    body { 
+     background: url('{% static "MillionDreams.png" %}') no-repeat top; 
+     -webkit-background-size: auto;
+     -moz-background-size: auto;
+     -o-background-size: auto;
+     background-size: 100% auto;
+    }
+</style> -->
+
+<!-- <footer class="page-footer transparent"> -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+          <p class="black-text left">Song classification framework </p>
+        </div>
+     </div> -->
+    <!-- <div class="footer-copyright"> -->
+        <!-- <div class="container"> -->
+            <!-- <p class="white-text text-lighten-4 right" style="position: fixed; bottom : 110; right : 10 ;width:100%; text-align:right"><a class="white-text text-lighten-4">© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</a></p> -->
+        <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </footer> -->
+
+    
+<h5 class="black-text text-lighten-4 right" style="position: fixed; bottom : 0; right: 10 ;width:100%; text-align:right"><a class="black-text">© 2019 Copyright Built and deployed by Chaithanya, Mahidhar and Seema</a></h5>
