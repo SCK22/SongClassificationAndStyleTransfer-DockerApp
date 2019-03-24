@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import sys
+import django_heroku 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -44,8 +46,8 @@ INTERNAL_HOSTS = ['']
 #         except dns.exception.Timeout:
 #             print('Unable to resolve %r, skipping' % host)
 
-MEDIA_ROOT = '/home/jarvis/work/GEM2/djangorestui/api/media/'
-MEDIA_URL = '/home/jarvis/work/GEM2/djangorestui/api/media/'
+MEDIA_ROOT = 'D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\api\\media'
+MEDIA_URL = 'D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\api\\media'
 
 # STATIC_ROOT = '/home/jarvis/work/GEM2/djangorestui/api/media/'
 # Application definition
@@ -149,3 +151,5 @@ SETTINGS_PATH = os.getcwd()
 TEMPLATE_DIRS = (
     os.path.join(SETTINGS_PATH, 'templates'),
 )
+
+django_heroku.settings(locals())

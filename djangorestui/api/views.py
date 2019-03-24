@@ -93,7 +93,7 @@ def generated_music_page(request):
 def select_song(request):
   if(request.GET.get('select_song')):
     models = []
-    for i in os.listdir('/home/jarvis/work/GEM2/djangorestui/api/dl_models'):
+    for i in os.listdir('./api/dl_models'):
         if '.json' in i:
             models.append(i)
     return render(
@@ -139,8 +139,8 @@ def run_model(request):
     with open('model_input.json', 'w') as outfile:
         json.dump(table, outfile)
     subprocess.run('python ./api/dl_model.py ./model_input.json', shell = True)
-    preds_df = pd.read_csv('/home/jarvis/work/GEM2/djangorestui/api/predictions.csv')
-    with open('/home/jarvis/work/GEM2/djangorestui/top3_classes.json') as f:
+    # preds_df = pd.read_csv('./api/predictions.csv')
+    with open('D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\top3_classes.json') as f:
       c  = json.load(f)
     k = list(c.keys())
     v = list(c.values())
@@ -158,7 +158,7 @@ def run_model(request):
 
 def return_plot(request):
   if(request.GET.get('waveplot')) or (request.GET.get('spectogram')):
-    song_path = '/home/jarvis/work/GEM2/djangorestui/api/media'
+    song_path = 'D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\api\\media'
     song_name = request.GET.get('song_box')
     y,sr = load_song(song_path, song_name)
     print(y)
