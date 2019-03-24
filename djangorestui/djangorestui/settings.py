@@ -27,7 +27,7 @@ SECRET_KEY = 'l)d9v*t45ylgi0_m@pmr^9#z1fm391l!$$ck(@lh&tq#(!95ji'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.0.165','10.0.1.128','127.0.0.1','10.0.0.252','10.0.0.234','.ClaSo.com']
+ALLOWED_HOSTS = ['10.0.0.165','10.0.1.128','127.0.0.1','10.0.0.252','10.0.0.234','.ClaSo.com','song-classification.herokuapp.com']
 INTERNAL_HOSTS = ['']
 
 # if 'runserver' in sys.argv:
@@ -46,10 +46,10 @@ INTERNAL_HOSTS = ['']
 #         except dns.exception.Timeout:
 #             print('Unable to resolve %r, skipping' % host)
 
-MEDIA_ROOT = 'D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\api\\media'
-MEDIA_URL = 'D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\api\\media'
+MEDIA_ROOT = 'D:/SongClassificationAndStyleTransfer-DjangoApp/djangorestui/api/media/'
+MEDIA_URL = 'D:/SongClassificationAndStyleTransfer-DjangoApp/djangorestui/api/media/'
 
-# STATIC_ROOT = '/home/jarvis/work/GEM2/djangorestui/api/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, ‘staticfiles’)
 # Application definition
 
 INSTALLED_APPS = [
