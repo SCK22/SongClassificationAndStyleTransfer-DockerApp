@@ -182,7 +182,7 @@ def return_prediction():
         lb = pickle.load(label_encoder_file,encoding='utf-8')
     print(input_params)
     if input_params:
-        song_path = '/home/jarvis/work/GEM2/djangorestui/api/media'
+        song_path = './api/media'
         song_name = input_params['song_name']
         y,sr = load_song(song_path, song_name)
         # print(y)

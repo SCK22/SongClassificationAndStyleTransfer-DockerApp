@@ -27,10 +27,10 @@ def simple_upload(request):
 
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        for i in os.listdir('api/media'):
+        for i in os.listdir('../djangorestui/api/media'):
           if i == filename:
-            src = 'api/media/' + i
-            dst = 'api/media/' + make_names(i)
+            src = '../djangorestui/api/media' + i
+            dst = '../djangorestui/api/media' + make_names(i)
             os.rename(src,dst)
 
         return render(request, 'main/sample_upload.html', {
@@ -40,8 +40,8 @@ def simple_upload(request):
 
 def uploaded_files(request):
     file_names = []
-    for i in os.listdir('api/media'):
-      if os.path.isfile('api/media/{}'.format(i)):
+    for i in os.listdir('./api/media/'):
+      if os.path.isfile('./api/media/{}'.format(i)):
         file_names.append(i)
     file_m_time = {}
     # for i in os.listdir('api/media'):
@@ -140,9 +140,10 @@ def run_model(request):
         json.dump(table, outfile)
     subprocess.run('python ./api/dl_model.py ./model_input.json', shell = True)
     # preds_df = pd.read_csv('./api/predictions.csv')
-    with open('D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\top3_classes.json') as f:
+    with open('../djangorestui/top3_classes.json') as f:
       c  = json.load(f)
     k = list(c.keys())
+
     v = list(c.values())
     return render(request = request,
         template_name ='main/predictions.html',

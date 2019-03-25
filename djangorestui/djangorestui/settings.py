@@ -49,7 +49,7 @@ INTERNAL_HOSTS = ['']
 MEDIA_ROOT = 'D:/SongClassificationAndStyleTransfer-DjangoApp/djangorestui/api/media/'
 MEDIA_URL = 'D:/SongClassificationAndStyleTransfer-DjangoApp/djangorestui/api/media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, ‘staticfiles’)
+# STATIC_ROOT = os.path.join(BASE_DIR, ‘staticfiles’)
 # Application definition
 
 INSTALLED_APPS = [
