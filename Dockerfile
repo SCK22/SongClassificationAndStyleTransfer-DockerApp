@@ -4,10 +4,11 @@ FROM python:3.6
 
 ENV PYTHONUNBUFFERED 1
 
-RUN add-apt-repository ppa:mc3man/trusty-media
 RUN apt-get update
-RUN apt-get dist-upgrade
-RUN apt-get install ffmpeg
+# RUN add-apt-repository ppa:mc3man/trusty-media
+# RUN apt-get update
+# RUN apt-get dist-upgrade
+RUN echo "Y" | apt-get install ffmpeg
 # source directory for the application
 
 RUN mkdir /code

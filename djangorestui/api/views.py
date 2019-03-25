@@ -40,8 +40,8 @@ def simple_upload(request):
 
 def uploaded_files(request):
     file_names = []
-    for i in os.listdir('./api/media/'):
-      if os.path.isfile('./api/media/{}'.format(i)):
+    for i in os.listdir('api/media/'):
+      if os.path.isfile('api/media/{}'.format(i)):
         file_names.append(i)
     file_m_time = {}
     # for i in os.listdir('api/media'):
