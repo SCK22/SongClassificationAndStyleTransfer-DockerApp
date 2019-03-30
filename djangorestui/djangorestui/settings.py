@@ -46,8 +46,8 @@ INTERNAL_HOSTS = ['']
 #         except dns.exception.Timeout:
 #             print('Unable to resolve %r, skipping' % host)
 
-MEDIA_ROOT = './djangorestui/api/media/'
-MEDIA_URL = './djangorestui/api/media/'
+MEDIA_ROOT = 'djangorestui/api/media/'
+MEDIA_URL = 'djangorestui/api/media/'
 print("MEDIA_ROOT", MEDIA_ROOT)
 
 # STATIC_ROOT = os.path.join(BASE_DIR, ‘staticfiles’)
