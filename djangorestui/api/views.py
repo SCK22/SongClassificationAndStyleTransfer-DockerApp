@@ -24,13 +24,12 @@ def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        for i in os.listdir('../djangorestui/api/media'):
+        for i in os.listdir('../'):
           if i == filename:
-            src = '../djangorestui/api/media' + i
-            dst = '../djangorestui/api/media' + make_names(i)
+            src = './djangorestui/api/media/' + i
+            dst = './djangorestui/api/media/' + make_names(i)
             os.rename(src,dst)
 
         return render(request, 'main/sample_upload.html', {
@@ -159,7 +158,7 @@ def run_model(request):
 
 def return_plot(request):
   if(request.GET.get('waveplot')) or (request.GET.get('spectogram')):
-    song_path = 'D:\\SongClassificationAndStyleTransfer-DjangoApp\\djangorestui\\api\\media'
+    song_path = "code/djangorestui/api/media/"
     song_name = request.GET.get('song_box')
     y,sr = load_song(song_path, song_name)
     print(y)

@@ -1,6 +1,7 @@
 # name of the image
+# multi stage build
 FROM ubuntu:16.04
-FROM python:3.6
+FROM python:3.6 
 
 ENV PYTHONUNBUFFERED 1
 
