@@ -46,8 +46,8 @@ INTERNAL_HOSTS = ['']
 #         except dns.exception.Timeout:
 #             print('Unable to resolve %r, skipping' % host)
 
-MEDIA_ROOT = 'djangorestui/api/media/'
-MEDIA_URL = 'djangorestui/api/media/'
+MEDIA_ROOT = '/code/djangorestui/api/media/'
+MEDIA_URL = '/code/djangorestui/api/media/'
 print("MEDIA_ROOT", MEDIA_ROOT)
 
 # STATIC_ROOT = os.path.join(BASE_DIR, ‘staticfiles’)
@@ -147,7 +147,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 SETTINGS_PATH = os.getcwd()
 TEMPLATE_DIRS = (
     os.path.join(SETTINGS_PATH, 'templates'),

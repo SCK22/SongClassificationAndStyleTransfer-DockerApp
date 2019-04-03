@@ -26,10 +26,10 @@ def simple_upload(request):
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        for i in os.listdir('../'):
+        for i in os.listdir('/code/djangorestui/api/media'):
           if i == filename:
-            src = './djangorestui/api/media/' + i
-            dst = './djangorestui/api/media/' + make_names(i)
+            src = '/code/djangorestui/api/media/' + i
+            dst = '/code/djangorestui/api/media/' + make_names(i)
             os.rename(src,dst)
 
         return render(request, 'main/sample_upload.html', {
@@ -39,8 +39,8 @@ def simple_upload(request):
 
 def uploaded_files(request):
     file_names = []
-    for i in os.listdir('api/media/'):
-      if os.path.isfile('api/media/{}'.format(i)):
+    for i in os.listdir('/code/djangorestui/api/media/'):
+      if os.path.isfile('/code/djangorestui/api/media/{}'.format(i)):
         file_names.append(i)
     file_m_time = {}
     # for i in os.listdir('api/media'):
