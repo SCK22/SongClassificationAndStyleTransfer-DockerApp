@@ -19,13 +19,10 @@ RUN mkdir /code
 WORKDIR /code
 
 # copy all the files of the project into the container from local machine
-
 COPY . /code/
 
-
 # run pip install for installing the requrements
-
-
 RUN pip install -r requirements.txt
 RUN pip install tensorflow-1.13.1-cp36-cp36m-manylinux1_x86_64.whl
+
 WORKDIR /code/djangorestui

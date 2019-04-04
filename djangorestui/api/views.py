@@ -79,8 +79,8 @@ def augmentation_code_page(request):
 
 def generated_music_page(request):
     file_names = []
-    for i in os.listdir('api/media/generated_music/'):
-      if os.path.isfile('api/media/generated_music/{}'.format(i)):
+    for i in os.listdir('/code/djangorestui/api/media/generated_music'):
+      if os.path.isfile('/code/djangorestui/api/media/generated_music{}'.format(i)):
         file_names.append(i)
     return render(
                 request = request,
