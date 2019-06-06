@@ -14,7 +14,7 @@ docker pull jarvis42/song:latest
 ```
 # to run the docker use the following command
 
-docker run -p 8000:8000 jarvis42/song python manage.py runserver 0.0.0.0:8000
+docker run -d -p 8000:8000 jarvis42/song python manage.py runserver 0.0.0.0:8000
 ```
 
 > djangorestui folder
