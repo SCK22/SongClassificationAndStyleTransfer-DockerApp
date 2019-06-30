@@ -5,3 +5,7 @@ README.md
 .gitignore
 
 */__pycache/
+
+Dockerfile
+
+docker-compose.yml
