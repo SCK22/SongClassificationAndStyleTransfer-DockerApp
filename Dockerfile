@@ -2,7 +2,7 @@
 # multi stage build
 # FROM ubuntu:16.04
 FROM alpine:3.8
-FROM python:3.6 
+FROM python:3.6
 
 ENV PYTHONUNBUFFERED 1
 
