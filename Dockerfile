@@ -11,12 +11,11 @@ RUN apt-get update
 # RUN apt-get update
 # RUN apt-get dist-upgrade
 RUN echo "Y" | apt-get install ffmpeg
-# source directory for the application
 
+# source directory for the application
 RUN mkdir /code
 
 # setup woking directory
-
 WORKDIR /code
 
 # copy all the files of the project into the container from local machine
