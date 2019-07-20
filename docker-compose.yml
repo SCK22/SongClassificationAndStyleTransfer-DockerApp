@@ -1,4 +1,4 @@
-version:  "3"
+version:  "3.7"
 
 services: 
   web: 
@@ -10,4 +10,3 @@ services:
       - ./media:/code/djangorestui/api/media
     ports:
       - "8000:8000"
-# -v: /api/media:/code/djangorestui/api/media

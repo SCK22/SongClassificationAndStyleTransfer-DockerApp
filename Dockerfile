@@ -1,4 +1,3 @@
-# name of the image
 # multi stage build
 # FROM ubuntu:16.04
 FROM alpine:3.8
@@ -25,3 +24,4 @@ COPY . /code/
 RUN pip install -r requirements.txt
 
 WORKDIR /code/djangorestui
+
