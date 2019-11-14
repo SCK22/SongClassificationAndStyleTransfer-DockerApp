@@ -26,5 +26,5 @@ RUN pip install -r requirements.txt
 WORKDIR /code/djangorestui
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver"]
+# CMD ["python", "manage.py", "runserver"]
 
