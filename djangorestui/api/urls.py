@@ -18,7 +18,6 @@ urlpatterns = [
     url("^uploadedsongs/$", views.uploaded_files),
     url("^classificationcode/$", views.classification_code_page),
     url("^styletransfercode/$", views.style_transfer_code_page),
-    url("^augmentationcode/$", views.augmentation_code_page),
     url("^musicmix/$", views.music_mix_code_page),
     url("^uploadedsongs/selectsong/$", views.select_song),
     url("^uploadedsongs/runmodel/$", views.run_model),
