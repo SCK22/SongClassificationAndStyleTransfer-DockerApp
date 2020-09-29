@@ -1,10 +1,11 @@
 # multi stage build
 # FROM ubuntu:16.04
-FROM alpine:3.8
-FROM python:3.6
+# FROM alpine:3.8
+# FROM python:3.7.3
+FROM python_req
 
 ENV PYTHONUNBUFFERED 1
-
+run pip install --upgrade pip
 RUN apt-get update
 # RUN add-apt-repository ppa:mc3man/trusty-media
 # RUN apt-get update

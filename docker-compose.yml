@@ -4,7 +4,6 @@ services:
   web: 
     build: .
     command: python manage.py runserver 0.0.0.0:8000
-    # command: cp /djangorestui/api/
     volumes: 
       - .:/code
       - ./media:/code/djangorestui/api/media

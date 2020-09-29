@@ -27,7 +27,7 @@ SECRET_KEY = 'l)d9v*t45ylgi0_m@pmr^9#z1fm391l!$$ck(@lh&tq#(!95ji'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.0.165','10.0.1.128','127.0.0.1','10.0.0.252','10.0.0.234','.ClaSo.com','song-classification.herokuapp.com']
+ALLOWED_HOSTS = ["192.168.99.100", "127.0.0.1"]
 INTERNAL_HOSTS = ['']
 
 # if 'runserver' in sys.argv:
