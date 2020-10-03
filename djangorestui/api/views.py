@@ -79,10 +79,6 @@ def music_mix_code_page(request):
     )
 
 
-def augmentation_code_page(request):
-    return render(request=request, template_name="main/music+data+augmentation.html")
-
-
 def generated_music_page(request):
     file_names = []
     for i in os.listdir("/code/djangorestui/api/media/generated_music"):
