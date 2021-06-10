@@ -4,7 +4,7 @@ sklearn
 pandas
 matplotlib
 librosa==0.6.2
-Django==2.2.13
+Django==2.2.24
 django-heroku==0.3.1
 django-tinymce==2.8.0
 djangorestframework==3.9.2
